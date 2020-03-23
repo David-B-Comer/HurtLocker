@@ -69,9 +69,9 @@ public class parser {
         printEmptyLine();
         applesPatternMatcher();
         printDoubleDash();
-        twentyThreeApplesMatcher();
-        printSingleDash();
         twentyFiveApplesMatcher();
+        printSingleDash();
+        twentyThreeApplesMatcher();
         printEmptyLine();
         numberOfErrors();
     }
