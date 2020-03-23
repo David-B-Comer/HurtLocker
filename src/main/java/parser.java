@@ -1,5 +1,3 @@
-import com.sun.xml.internal.bind.v2.runtime.output.StAXExStreamWriterOutput;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
@@ -40,12 +38,22 @@ public class parser {
             return null;
         }
 
-//        name [nNaAmMeE]
-//        milk [mMiIlLkK]  "(?i:.*milk.*)"
-//        bread [bBrReEaAdD]  "(?i:.*bread.*)"
-//        cookies [cCoOkKiIeEsS]  "(?i:.*cookies.*)"
-//        apples [aApPpPlLeEsS]  "(?i:.*apples.*)"
-//
+        public void showGroceryList() {
+            milkPatternMatcher();
+            threeTwentyThreeMilkMatcher();
+            oneTwentyThreeMilkMatcher();
+            breadPatternMatcher();
+            oneTwentyThreeBreadMatcher();
+            cookiesPatternMatcher();
+            twoTwentyFiveCookiesMatcher();
+            applesPatternMatcher();
+            twentyThreeApplesMatcher();
+            twentyFiveApplesMatcher();
+
+
+
+        }
+
         public void milkPatternMatcher() {
             int count = 0;
             Pattern milkPattern = Pattern.compile("milk",Pattern.CASE_INSENSITIVE);
@@ -88,40 +96,67 @@ public class parser {
         System.out.println("name:   Apples     seen: " + count + " " + "times\n");
     }
 
+    public void threeTwentyThreeMilkMatcher() {
+        int count = 0;
+        Pattern milk325Pattern = Pattern.compile("3.23",Pattern.CASE_INSENSITIVE);
+        Matcher milk325Matcher = milk325Pattern.matcher(data);
+
+        while (milk325Matcher.find()) {
+            count++;
+        }
+        System.out.println("Price:   3.23       seen: " + count + " " + "times\n");
+        }
+        public void oneTwentyThreeMilkMatcher() {
+            int count = 0;
+            Pattern milk123Pattern = Pattern.compile("1.23",Pattern.CASE_INSENSITIVE);
+            Matcher milk123Matcher = milk123Pattern.matcher(data);
+
+            while (milk123Matcher.find()) {
+                count++;
+            }
+            System.out.println("Price:   1.23       seen: " + count + " " + "times\n");
+        }
+        public void oneTwentyThreeBreadMatcher() {
+            int count = 0;
+            Pattern bread123Pattern = Pattern.compile("1.23",Pattern.CASE_INSENSITIVE);
+            Matcher bread123Matcher = bread123Pattern.matcher(data);
+
+            while (bread123Matcher.find()) {
+                count++;
+            }
+            System.out.println("Price:   1.23       seen: " + count + " " + "times\n");
+        }
 
 
-//        public void nameMatcher() {
-//            System.out.println(data.matches("(?i:.*name.*)"));
-//        }
-//        public void milkMatcher() {
-//        System.out.println(data.matches("(?i:.*milk.*)"));
-//        }
-//        public void breadMatcher() {
-//        System.out.println(data.matches("(?i:.*bread.*)"));
-//        }
-//        public void cookiesMatcher() {
-//        System.out.println(data.matches("(?i:.*cookies.*)"));
-//        }
-//        public void applesMatcher() {
-//        System.out.println(data.matches("(?i:.*apples.*)"));
-//        }
-//        public void threeTwentyThreeMilkMatcher() {
-//            System.out.println(data.matches("(?i:.*3.23.*)"));
-//        }
-//        public void oneTwentyThreeMilkMatcher() {
-//        System.out.println(data.matches("(?i:.*1.23.*)"));
-//        }
-//        public void oneTwentyThreeBreadMatcher() {
-//        System.out.println(data.matches("(?i:.*1.23.*)"));
-//        }
-//        public void threeTwentyFiveCookiesMatcher() {
-//        System.out.println(data.matches("(?i:.*3.25.*)"));
-//        }
-//        public void twentyThreeApplesMatcher() {
-//        System.out.println(data.matches("(?i:.*0.23.*)"));
-//        }
-//        public void twentyFiveApplesMatcher() {
-//        System.out.println(data.matches("(?i:.*0.25.*)"));
-//        }
+        public void twoTwentyFiveCookiesMatcher() {
+            int count = 0;
+            Pattern cookies225Pattern = Pattern.compile("2.25",Pattern.CASE_INSENSITIVE);
+            Matcher cookies225Matcher = cookies225Pattern.matcher(data);
+
+            while (cookies225Matcher.find()) {
+                count++;
+            }
+            System.out.println("Price:   2.25       seen: " + count + " " + "times\n");
+        }
+        public void twentyThreeApplesMatcher() {
+            int count = 0;
+            Pattern apples23Pattern = Pattern.compile("0.23",Pattern.CASE_INSENSITIVE);
+            Matcher apples23Matcher = apples23Pattern.matcher(data);
+
+            while (apples23Matcher.find()) {
+                count++;
+            }
+            System.out.println("Price:   0.23       seen: " + count + " " + "times\n");
+        }
+        public void twentyFiveApplesMatcher() {
+         int count = 0;
+            Pattern apples25Pattern = Pattern.compile("0.23",Pattern.CASE_INSENSITIVE);
+            Matcher apples25Matcher = apples25Pattern.matcher(data);
+
+            while (apples25Matcher.find()) {
+                count++;
+            }
+            System.out.println("Price:   0.25       seen: " + count + " " + "times\n");
+        }
 
 }

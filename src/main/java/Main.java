@@ -13,9 +13,6 @@ public class Main {
         String output = (new Main()).readRawDataToString();
         //System.out.println(output);
         parser groceryList = new parser();
-        groceryList.milkPatternMatcher();
-        groceryList.breadPatternMatcher();
-        groceryList.cookiesPatternMatcher();
-        groceryList.applesPatternMatcher();
+        groceryList.showGroceryList();
     }
 }
